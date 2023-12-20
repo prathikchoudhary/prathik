@@ -38,10 +38,10 @@ const listenigSchema = new Schema({
             required: true
           }
     },
-    // cartegorey: {
-    //     type: String,
-    //     enum: 
-    // }
+    cartegorey: {
+        type: String,
+        enum: ['One,Two,Three']
+    }
 });
 
 // deleting listing reviews and review imporatant
