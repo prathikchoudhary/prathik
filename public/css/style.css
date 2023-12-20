@@ -55,6 +55,8 @@ body{
 
 .card-img-top{
     border-radius: 1rem !important;
+    height: 30vh;
+
 }
 
 .card-img-overlay{
