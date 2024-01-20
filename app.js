@@ -88,12 +88,7 @@ app.use("/",userRouter);
 
 // review Routes
 
-// app.get("/listing/filter/Room", async(req,res) => {
-//   let {id} = req.params;
-//     let allListing = await listing.find({category: {$all : [id]}});
-//     console.log(allListing);
-//     res.render("includes/filter.ejs",{allListing});
-// });
+
 
 app.get("/Trending/:id",(req,res)=>{
   
