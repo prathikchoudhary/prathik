@@ -1,0 +1,72 @@
+<% layout("layout/layouts.ejs") %>
+<body>
+    <div class="row"></div>
+        <div class="col-8 offset-2">
+            <h2 class="heading">Edit List</h2>
+            <form method="POST" action="/listing/<%= listeng._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data" >
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" value="<%= listeng.title %>" name="list[title]" required class="form-control">
+                    <div class="invalid-feedback">
+                        Please Enter Valid Title.
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" value="<%= listeng.description %>" name="list[description]" required class="form-control">
+                    <div class="invalid-feedback">
+                        Please Enter Valid Description.
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <img src="<%= originalImage %>" alt="" height="250px" width="250px" srcset="">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" name="list[image]" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <p>Selet Your place</p>
+                    <select class="form-select" name="list[cartegorey]" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="Room">Room</option>
+                        <option value="Iconic Cities">Iconic Cities</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="Castles">Castles</option>
+                        <option value="Amazing">Amazing</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Arctic">Arctic</option>
+                    </select>
+                    <div class="invalid-feedback">Choose category</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" value="<%= listeng.price %>" name="list[price]" required class="form-control">
+                        <div class="invalid-feedback">
+                            Please Enter Valid Price.
+                          </div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" value="<%= listeng.location %>" name="list[location]" required class="form-control">
+                        <div class="invalid-feedback">
+                            Please Enter Valid Location.
+                          </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" value="<%= listeng.country %>" name="list[country]" required class="form-control">
+                    <div class="invalid-feedback">
+                        Please Enter Valid Country.
+                      </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-dark col-md mb-3">Sumbit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>  
